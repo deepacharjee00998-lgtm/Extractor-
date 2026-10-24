@@ -1,0 +1,19 @@
+services:
+  - type: worker
+    name: fire-extractor
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        value: "6871050893"
+      - key: FORCE_CHANNEL
+        value: "@BankingTitanss"
+      - key: FORCE_CHANNEL_URL
+        value: "https://t.me/BankingTitanss"
+      - key: UPI_ID
+        sync: false
+      - key: UPI_QR_URL
+        sync: false
